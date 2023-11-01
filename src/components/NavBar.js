@@ -7,6 +7,7 @@ import AuthContext from '../authCtx/auth-context';
 const NavBar = (props) => {
   const ctx = useContext(AuthContext);
   const isLoggedIn = ctx.isLoggedIn;
+  console.log(isLoggedIn);
   const linkStyle = {
     color: 'white',
     textDecoration: 'none',
@@ -65,7 +66,7 @@ const NavBar = (props) => {
         </Container>
       </Navbar>
       <div className="position-fixed top-0 end-0 m-1" style={{ zIndex: 1000 }}>
-  <HeaderCart onClick={props.onClick} />
+  {isLoggedIn && <HeaderCart onClick={props.onClick} />}
 </div>
     </React.Fragment>
   );
