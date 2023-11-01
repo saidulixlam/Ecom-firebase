@@ -68,6 +68,7 @@ const CartProvider = (props) => {
       }
     } catch (error) {
       console.error('Error adding item:', error);
+      
     }
   };
 
